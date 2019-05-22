@@ -1,0 +1,1758 @@
+/****************************Interview Questions********************************************************/
+1) What is meant by an object in Salesforce?
+Objects in Salesforce are used as database tables that are used to store information of an organization. 
+
+We have two types of objects in Salesforce, which are:
+
+Standard Object : these are the objects provided by the Salesforce which include Contacts, accounts, opportunities, leads, cases, campaigns, products, contracts, dashboards etc.
+
+Custom Object : This includes the modifications made to the Salesforce by users. It stores the essential and unique information of an organization. Custom Object includes page layouts, relationship to other objects, custom user interface tab, custom fields etc.
+
+
+2) What is App in Salesforce?
+An App in Salesforce.com is a container which holds various things such as a logo, name, and a set of required tabs.  It is also called as a group of tabs that work together to prove the functionality that you are looking for.
+
+In Salesforce, you can customize apps to match your requirements, or you can build new applications by combining custom and standard tabs.         
+
+The process to create an app in Salesforce:
+
+Setup ---> build---> Create---> App---> Click on new. By following this procedure you can build an application however you want.    
+
+
+3) What is a profile? Can two users have the same profile?
+The profile is defined as a collection of rules and procedures a person needs to follow to access particular records. There are multiple profiles available in Salesforce. For example, a sales profile can have access to leads, opportunities, contacts, campaigns, etc.
+
+As far as the second question is considered the answer would be yes. The people who work in one department have the same profile. So the people whoever works under a particular department would be assigned with the same profiles.
+
+As we have seen in the sales profile, many people work under it and every person works under is assigned with the same profile. Hence any number of people can have the same profile.   
+
+
+4)  What are the benefits of using Salesforce CRM?
+We get the following benefits by using Salesforce CRM.   
+
+Improved organizational understanding.
+Enhanced communication.
+We can understand the customer better and can facilitate better services.
+Salesforce automates the repeated rule-based tasks.
+Improved analytics and dashboards to analyse the data.
+Reduction in cost and cycle time.
+Improves the efficiency of teams.
+5) How many relationships do we have in Salesforce?
+We have three types of relationships in Salesforce, which are:
+
+Master-detail relationship
+Lookup relationship
+External Lookup
+
+Relationships in salesforce
+
+6) What is the Master-Detail relationship?
+This Master-Detail relationship is the same as the relationship between a parent & child. In this aspect, the master is treated as  Parent, and the Detail is a child. The master Object takes control over the behaviour of the Detail object. Survival of the child is dependent on the parent because if the Master get deleted the Detail will also automatically get deleted. You can create Roll-up summary fields in master records which helps in calculating the Min, Avg, Sum of the child records.
+
+7) List some example of custom fields?
+There are many custom fields available which are Pick list, Currency, Date, Text, Picklist  (multi-select), Email, Percent, Number, Phone, Text area, Lookup relationship, Geolocation, Checkbox, Master-Detail relationship etc..
+
+8) What is Sandbox in Salesforce?  
+A Sandbox is defined as a testing environment which is used to test the code or to conduct experiments in an isolated environment without being harming the production environment.
+
+9) When do we use Sandbox ?
+A Sandbox helps you when you want to test the newly developed application on force.com or visualforce page. It is not possible to check something in the production environment if do, so it creates a problem for the regular functioning. So, to get out of this problem developers uses Sandbox to test the application.
+
+Types of sandboxes available are :
+
+Developer
+Developer pro
+Partial copy
+Full
+10) Is it possible to edit visualforce page in production environment ?
+Yes, of course !  We can create and edit the visualforce pages in both the production environment and in a sandbox. The only thing you can not do in the production environment with a visualforce page is adding the unique values for which you need to do this in the sandbox.
+
+11) Is it possible to make changes to apex trigger/apex class in production function ?
+No, you can not do that if you want to make any edits to apex trigger/apex class that should be done in a sandbox environment.
+
+12) What are the things that can be customized on page layouts ?           
+Page layouts allow you to personalize or customize the given page objects or records. It helps in customizing or designing the page according to your requirements. Page layout editor helps you in customizing the pages. Using this page, you can customize things like buttons, fields, custom links, and related lists.
+
+13) What is Tab in Salesforce ?
+A Tab is a user interface to display custom object data or other embed web content to a user. We have three types of tabs in Salesforce which are:
+
+Custom Tabs
+Visualforce Tabs
+Web Tabs
+14) How to create many to many relationships in Salesforce ?
+It helps in creating a many-to-many relationship between two objects in Salesforce. Using many-to-many relationship you can connect each record of an object to be linked with multiple records of other objects and vice versa. Junction object helps us in connecting the two selected objects with each other.      
+
+15) What is the use of writing sharing rules in Salesforce ?
+Sharing rules is an authorised facility given to only a few individuals in an organization to grant Edit access or to public read-only access to the specific individuals. The best example here to consider is, your managers and the people who are at higher positions would enjoy the access to the crucial records which your peers do not.  
+
+16) Is it possible to restrict access to data using sharing rules ?
+The sharing rules are used only for allowing greater access to records not for restricting.
+
+17) What are the types of email templates that can be created in Salesforce?
+The below mentioned are the list of templates available in Salesforce :
+
+a) Text Template : 
+
+This template can be modified or changed by any user
+
+b) HTML with letterhead : 
+
+People like administrators and users with Edit HTML permission can create this email template based on letterhead.
+
+c) Custom HTML :
+
+People like administrators and users with Edit HTML permission can create this email template without using letterhead. It requires knowledge of HTML or gets the HTML code to insert it into the email template.
+
+d) Visualforce Email Template : 
+
+This template can only be created by administrators and developers using visualforce. It is capable of merging the data from various records.               
+
+18) Is it allowed to insert organizational own custom logo while creating an application?  
+Yes, it is allowed to insert in documents, and the same can be used as Logo of an organization.   
+
+19) What is a self-relationship?
+It is a personal lookup to the same object.  The self-relationship creates a tree diagram of the objects. Let's take an example as an object “merchandise”. In this, we can create relationship merchandise between two accounts. This is called a self-relationship.   
+
+20) What is workflow in Salesforce?  
+Workflow is an excellent way to automate specific business processes in Salesforce. To do this, you are required to define certain rules and regulations to automate the tasks such as sending an email, updating a field, create a task
+
+We can have access to workflow across the object.
+It is not possible to query from the database.
+21) What is Trigger in Salesforce?  
+The trigger is defined as an Apex code that executes before or after the following functions such as insert, update, delete, etc. trigger enables to perform custom actions before and after modifications to the records of Salesforce.  
+
+22) What is wrapper class in Salesforce?  
+A wrapper or container is a data structure, a class type, or an abstract data type which contains multiple collections of objects. It helps in displaying various objects on a visualforce page in a single table.      
+
+23) What can cause data loss in Salesforce? 
+There are many things which can contribute to the data loss in Salesforce. Which includes : 
+
+Migrating to number, per cent, and money, from other data types. 
+When you change the date and time 
+Migrating to multi-select picklist from any other type but except picklist. 
+Moving from Checkbox, auto number,multi-select picklist to any other types. 
+Changing text area to phone, URL, email, or text. 
+24) Explain the three types of objects relations in Salesforce ?
+Master-detail, many-to-many, and One-to-many are the three types of object relations in Salesforce.  
+
+25) What are the types of reports that we have in Salesforce ? 
+There are four types of reports that are available in Salesforce which are as follows. 
+
+The tabular report are those which gives us the total in a tabular format.
+Matrix report the format where grouping is done based on columns and rows. 
+The summary report which gives us the detail reports based on columns. 
+Joined reports which are capable of allowing two or more reports in one report.    
+26) Can we schedule a dynamic dashboard in Salesforce? 
+
+No, we can not do that in Salesforce.
+
+27) What is an Audit trail? 
+
+The Audit trail in Salesforce is a unique feature which helps in tracking the changes that have been made in the organization by you and other administrators. It would be helpful for the organization with more administrators. This audit trail shows you the information of twenty most recently made changes in your organization. 
+
+Below are the things that you could come to know: 
+
+The date and time. 
+Username of who made the changes.  
+What the change was. 
+28) Explain the Salesforce dashboard ?
+In Salesforce we use dashboards to represent the data in a pictorial format. Salesforce dashboard is capable of displaying 20 reports at a time.  
+
+29) What is the junction object and what is it used for ? 
+Junction objects are mainly used to create a many-to-many relationship in Salesforce. If you consider a recruiting application as an example, you can find a position that is linked to many candidates, and in the same fashion, a candidate can apply for many positions. 
+
+30) How does Salesforce track sales details?  
+Salesforce gives the accurate results of following things such as 
+
+Number of customers served on a daily basis 
+Regular sales numbers 
+Complete reports from sales Manager. 
+Generates sales reports on a timely basis 
+It provides the details of repeat customer activity. 
+31) What are the types of relationships offered by Salesforce? 
+We have two types of relationships in Salesforce.com which are Master-detail relationships and Lookup relationships. 
+
+32) Explain about object relationship overview  ?
+It creates a link between the custom object and standard object recorded in a related list. This is helpful to find the product's defects.  Salesforce enables its user to define various types of relationships after creating a custom relationship on a specific object.      
+
+33) What are static resources? 
+Static resources allow you to add the content that you want to reference it on the visualforce page, which includes things like images, Javascript, archives, CSS files, etc. Maximum size of a static resource of an organization is 250 MB.   
+
+34) What are the ways to call the Apex class? 
+Below mentioned are the ways in Salesforce to call Apex class. 
+
+From another class 
+From developer console 
+From JavaScript links
+From home page components   
+By using trigger 
+From visualforce page
+35) What is manual sharing? 
+Manual sharing is a process of granting access to the individual records to the user roles and public groups. This facility is available for record owners, managers, and administrators.  
+
+36) What are the actions in the workflow? 
+Below mentioned are the actions in the workflow 
+
+Field update 
+Task
+Outbound message 
+Email alert 
+37) Explain the difference between role and profile ?
+Role:
+
+In Salesforce Role is meant to increase the data visibility to a particular user. It can be done through sharing rules or by building role hierarchy. Using roles, you can control the access to records. The role is considered as access at a record level, and it is not mandatory for all users. 
+
+
+Profile:
+
+unlike roles profile is mandatory for all, and it stays at the object level. It is treated as a building pillar of an organization. 
+
+38) What are permission sets? 
+A Permissions set is a collection of settings or permissions and is used to extend the user functional access without changing actual profiles. You can use permission sets to various types of users to extend the functionality access regardless of their roles. It is time taking task to create a profile; instead of this, you could easily create a permission set.  
+
+39) What is meant by “Transfer record” in profile? 
+Transfer record is a type of function used to grant permission. If a user has the permission to share a record with others, then he can share the records that have read-only access. 
+
+40) What is the procedure to get the Security token in Salesforce ?       
+Click on your Name tab, then click on Personal and you will find Reset my security token. 
+
+41) What is Fiscal year in Salesforce?
+The Fiscal year is known as the starting and ending date of a company financial year. We have two types of financial years in Salesforce which are as follows. 
+
+Standard fiscal year 
+Custom fiscal year
+42) What are the different ways to store various types of records in Salesforce ? 
+We have five different ways in Salesforce to store various types of records such as images, files, and documents.  They are 
+
+Attachments 
+Google drive 
+Chatter Files 
+Libraries 
+Attachments  
+43) What are the default indexed fields in Salesforce ? 
+We have some fields which are indexed by default in Salesforce, which are :
+
+Name 
+ID 
+Owner fields 
+Master-detail relationship fields 
+Lookup fields 
+Last modified dates 
+Audit dates 
+44) Which field cannot be added to a custom index ?
+We can not add formula fields to the custom index in Salesforce. 
+
+45) What are standard index fields in Salesforce? 
+Below listed are the standard index fields in Salesforce.
+
+Owner fields 
+Lookup fields 
+ID
+Name
+Master-detail relationship field 
+Last modified dates etc.     
+46) What is the maximum number of field dependencies we can use in visualforce page? 
+The maximum number of field dependencies we can use is a visualforce page is 10.
+
+47) Explain about various methods of batch Apex class ?
+The Database. Batchable contains three methods that must be implemented.
+
+Start method
+Execute method 
+Finish method 
+48) What is a Visualforce component ? 
+Visualforce components are small reusable components of functionality such as widgets, user interface elements, panels etc. We have two types of visualforce components which are standard and custom and are used to define the user interface behaviour. 
+
+49) List the data types that a Set can store ?
+The Sets can store any of the following data types
+
+Collections 
+User-defined types
+subjects 
+Primitive types
+Built-in Apex types 
+50) What is meant by Apex transaction ?
+
+An Apex transaction represents a group of operations that are needed to be executed at once.  It includes the Data Manipulation Language (DML) and is responsible for querying records. The DML operations in a transaction either success or if anything goes wrong or occurs even with a single record could result in a rollback of the entire transaction. 
+
+ 
+
+Salesforce Apex Interview Questions
+
+Salesforce Vs ServiceNow
+ 	SalesForce	ServiceNow
+Platforms	Desktop, Mobile, Cloud	Cloud
+Type of Software	Stand alone, Cloud, Saas	Stand alone, Cloud, Saas
+Key Features	Markeitng Sales Management, Customer Management, Customer Service	Information Technology, Customer Management, Customer Service
+Price	Preferred by all types of customers as it is cost effective	Approximately four time more than Salesforce
+Typical Customers	Small, Mid and Enterprise	Mid and Enterprise
+Security	Moderate	Best when compared to Salesforce
+ 
+
+51)  What is Apex in Salesforce ?
+Apex is a strongly typed object-oriented programming language.
+It allows the developer to execute flows and transaction control statements.
+Apex enables developers to add business logic to most system events like button clicks related record updates and visualforce pages.
+52) What is Apex Programming Language ?
+1. Integrated: It provides built-in support for DML Calls
+
+2. Inline Salesforce Object Query Language
+
+3. Easy to Use
+
+4.Easy to Test
+
+5. Version
+
+6. Multi Tenant Aware Application
+
+53) When Should I Use Apex ?
+To create Email services
+Create web services
+Perform complex validation over multiple objects
+To create complex business processes that are not supported by workflow.
+Create custom transaction logic
+Attach custom logic to another operation
+54) How Does Apex Work ?
+All Apex programs runs entirely ON-Demand on Force.com Platform.
+First the platform application server compiles the code into abstract set of instructions that can be understood by Apex runtime interpreter.
+The compile code is stored to metadata.
+When the end users triggers the execution of Apex by clicking button or visualforce page the application servers retrieves the compiled instructions from the metadata and send them to runtime interpreter before returning the result.
+
+55) What is Apex Email Service ?
+Email services is an automated process that use Apex classes to process the contents, Headers, Attachments of Inbound Email.
+
+Note :
+
+Visualforce email templates cannot be used for mass emails.
+We can associate each email services with one or more salesforce generated email address to which the users can send messages for processing.
+56) What is Map Class in Apex Salesforce ?
+Map Class Contains methods for the Map collection type.
+A Map is collection of key values pairs where each unique key maps to a single value.
+Map keys and values can be any data type primitive types, collections, sObjects, users defined types, and built in Apex Types.
+For Example, the following table represents a map of countries and currencies
+
+Country(Key)	‘United States’	‘Japan’	;France’	‘England’	‘India’
+Currency (Value)	‘Dollar’	‘Yen’	‘Euro’	‘Pound’	‘Rupee’
+57) What is SOQL ?
+A query language that allows you to construct simple but powerful query strings and to specify the criteria that should be used to select the data from the platform database. SOQL Stands for Slaesforce Object Query Language.
+
+58) What Are The Types of SOQL Statements in SalesForce ?
+Salesforce Object Query Language is used to query that records from the database.com based on the requirement.
+
+There are 2 types of SOQL Statements.
+
+1. Static SOQL
+
+2. Dynamic SOQL
+
+1 Static SOQL : 
+
+The oStatic SOQL Statement is written in []  (Array Brackets)
+
+This statements are similar to IINQ(Ion Integrated Query)
+
+Example:
+
+1
+2
+3
+String search for =’Jones’;
+ 
+Contact[] contacts=[select testfield__c, FirstName, LastName from Contact Where Last Name=:search for];
+2 Dynamic SOQL :
+
+It is used to refer to the creation of a SOQL string at run time with Apex code.
+
+Dynamic SOQL enables you to create more flexible application.
+
+To create Dynamic SOQL query at run time use Database.Query() method, in one of the following ways.
+
+Return a single sObjects when the query returns a single record.
+sObjects s = Database. Query(String_limit_l);
+
+Return a list of sObjects when the query returns more than a single record.
+
+Examples:
+
+Eg 1 :
+
+1
+2
+3
+String myTestString = ‘TestName’;
+ 
+List List= Database.Query(SELECT Id FROM MyCustomObject__c WHERE Name = :myTestString);
+Eg2:
+
+1
+2
+3
+String resolviedfield L = myvariable.field__c;
+ 
+List L = Database.Query(‘SELECT Id FROM myCustomObject__c WHERE field__c = ‘+resolvedfield_L);
+59) What is The Syntax of SOQL Statement?
+SELECT field1, field2,.... FROM Object_Type [WHERE condition]
+
+Example:
+
+List accountList =
+
+   [SELECT ID, Name, FROM Account];
+
+List accountList =
+
+   [SELECT ID, Name, FROM Account WHERE annual revenue<10000];
+
+60) What is Apex Interface ?
+Interface is a collection of unimplemented methods. This will specify the signature of the method, types of inputs that we pass the method specifies what type is given as an output.
+
+NOTE : Generally the interface methods we give it as global.
+
+61) What is Batch Apex in Salesforce ?
+Batch Apex :
+
+Batch Apex allows you to define a single job that can be broken up into manageable chunks, whereas every chunk can be processed separately.
+
+In the Batch Apex it will fetch all the records on which you want to perform the field update and divide them into list of 200 records and on every 200 records operation is performed separately.
+
+This would help us to execute on more than 10,000 records as, it won’t perform an operation on all the records in a single transaction instead it dividing them into Number of subtasks where each subtask may contain the records up to 4000.
+
+Example:
+
+If you need to make a field update of every record of account object in your organization, then we have governing limits that would restrict us from achieving the above task.
+
+Reason: In a single transaction we can process only 10,000 records. Now in the above case if we have more than 10,000 records in the organization then we can not perform this field update.
+
+62) What is Apex Scheduler?
+It will invokes the Apex class to run at specific time.
+
+Anybody who want to schedule their class they have to implement schedulable interface.
+
+Schedule Interface :
+
+The class that implements this interface can be scheduled to run at different intervals. This interface has several methods they are
+
+Public void execute(schedulablecontext sc)
+
+Example:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+Public class mySchedule implements schedulable
+ 
+{
+ 
+Public void execute(schedulablecontext sc)
+ 
+{
+ 
+Account a = new Account(Name = ‘Faraz’)
+ 
+Insert a;
+ 
+}
+ 
+}
+63) What is the Apex Trigger in Salesforce ?
+Trigger is a Apex Code that executes before or after.
+The following types of DML Operation:
+
+1. Insert
+
+2. Update
+
+3. Delete
+
+4. Merge
+
+5. Upsert
+
+6. Undelete
+
+64) What are The Types of Apex Triggers in Salesforce?
+Triggers Are divided into 2 types
+
+1. Before Triggers
+
+2. After Triggers
+
+Before Triggers :
+
+Before Triggers can be used to update or validate values of a record before they are saved to the database.
+
+After Triggers :
+
+After Triggers Before Triggers can be used to access field values of the records that are the stored in the database and use this values to make changes in other records.
+
+Syntax :
+
+1
+Trigger trigger_name on Object_Name(trigger_events) { Code_block } WHERE trigger_events can be comma separated list of events.
+65) What is Apex Managed Sharing?
+Apex Managed Sharing provides developers with the ability to support an application to share a requirements.
+
+This type of sharing available to only users with modify all data permissions. Only this users can add/change apex managed sharing.
+
+Apex Managed Sharing uses a Sharing reason (Apex Sharing Reason)
+
+66) What is the Usage of apex program with within visualforce page ?
+When you want to call apex class in visualforce page we have to declare in the following format.
+
+1
+< Apex : page controller = “class name “ >
+Whenever we call  a visualforce page in which controller attribute is  defined it will first create an object for the apex class which is defined in controller.
+
+Subscribe to our youtube channel to get new updates..!
+
+When object is created for the apex class first it involves the constructor.
+
+67) GROUP BY ?
+With  ApI version 18.0 and  later /you can use group by with aggregate functions, such as sum() or max() to summarize the data and enable you to rollup query results rather than having to process the individual records in your code.
+
+ Syntax :
+
+ [ GROUP BY field GROUP BY LIST]
+
+68) SOSL Statements In Salesforce Apex ?
+SOSL statement evaluate to a list of sobjects , where each list contains the search results for a particular sobject type, The result lists are always returned in the same order as they were specified in the query.
+
+If a SOSL query does not return any records for a specified sObject type , the search results include an empty list for that sObject.
+
+For example, you can return a list of accounts, contacts, opportunities and leds that begin with the phase map.
+
+1
+List < list < subject >> search list = [ find 'map*' In ALL FIELDS RETURNING Account (ID, Name), contact, opportunity, lead ];
+Note :
+
+The syntax of the classon Apex differs from the syntax of the FIND clause in the SOAP API.
+
+In Apex, the value of the FIND cause is demarcated with single quotes.
+
+Example:
+
+1
+2
+3
+FIND 'map*' IN ALL FIELDS RETURNING account (Id, Name], Contact, Opportunity, Lead.
+ 
+In the Force.com API, the value of the FIND Clause is demarcated with braces.
+For Example:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+FIND {map*} IN ALL FIELDS RETURNING account  [Id,name], contact ,opportunity,lead.
+ 
+From search list , you can create arrays for each object returned.
+ 
+Account [ ]  accounts = (( list < accounts > ) search list [0] );
+ 
+Contact [ ]  contacts = [( list ) search list [0]) ;
+ 
+Opportunity [ ] opportunities = ((list < opportunity> ) search list [2]) ;
+ 
+Lead [ ] leads = (( list < lead> ) search list [3]);
+69) Javascript remoting for apex controllers ?
+Use javascript remoting in visualforce to call methods in apex controllers from javascript.
+
+Javascript remoting has 3 parts.
+
+The remote method invocation you add to the visualforce page, written in javascript.
+
+The remote method definition in your Apex controller class.
+
+This method definition is written in apex, but there are  few differences from normal action methods.
+
+The response handles callback function you add to or include in your vf page, written in javascript.
+
+70) Adding javascript remoting to a vf page
+To use javascript remoting in a vf page , add the request as a java script invocation with the following from.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+[namespace.] controller.method (
+ 
+                          [parameters….,]
+ 
+                           Call back Function,
+ 
+                         [configuration]
+ 
+                      );
+Name space is the namespace of the controller class
+
+Controllers is the name of your apex controller.
+
+Method is the name of your apex controller method you are calling.
+
+Parameters is the comma-separated list of parameters that your method takes.
+
+Callback function is the name of the javascript function that will handle the response from the controller.
+
+Configuration configures the handling of remote call and response.
+
+71)  What is the main difference between using data table vs .page block table tags?
+PageBlock: For default salesforce standard format.
+
+Data table: To design custom formats
+
+72) Which tag is used with both radio buttons and picklists to create the selectable values?
+1
+tag
+73) What is Multitenant Architecture?
+An application model in which all users and apps share a single, Common infrastructure and code base.
+
+74)  What is metadata - driven development model?
+An app development model that allows apps to be defined as declarative ‘blueprints”, with no code required. Data Models, objects, forms, workflows, and more are defined by Metadata.
+
+75)  What are force platform sites?
+Public websites and applications that are directly integrated with your salesforce organization without requiring users to log in with a username and password.
+
+76)  What is AppExchange directory ?
+A web directory where hundreds of appexchange apps  are available to salesforce customers to review, demo, comment upon, and /or install. Developers can submit their apps for listing on the appexchange directory if they want to share them with the community.
+
+77) What are some apex classes that are commonly used within ?
+Standard controller, select option, page reference, message, etc,
+
+78) What are the effects of using the transient keyword?
+The transient keyword prevents the data from being saved in to view state. This should be used for very temporary variables.                                                                 
+
+79) Configuring javascript remoting requests ?
+Configure a remoting request by proving an object with configuration settings when you declare the remoting request.
+
+javascript remoting supports the following configuration parameters.
+
+Name
+
+Datatype
+
+Description
+
+Buffer
+
+Boolean
+
+Whether to group requests executed close to each other in time into a single request. The default is true.
+
+Escap
+
+Boolean
+
+Whether to escape the apex methods response. The defaults is true.
+
+Timeout
+
+Integer
+
+The timeout for the request in mill Seconds. Default is 30000(30 second)
+
+ 
+
+80) How to invoke batch apex job (or) how to execute the batch apex job programmatically ?
+We can use database.executebatch ( ) method to programmatically begin the batch job.
+
+Syntax:
+
+Public static ID execute batch ( sObject class name)
+
+Public static ID execute batch (sObject class name, integes scope)
+
+The above two methods are static methods of database class. We can use any one of the method to execute the batch job.
+
+NOTE:
+
+The class name what we are passing to the database.execute batch( ) method should be object of the class which has implemented database.batchable interface.
+
+81) What is Future Annotation(@Future) ?
+Use the future annotation to specify that these methods that are executed asynchronously.
+
+Methods with future annotation must be static methods
+
+Methods with future annotation can only return a void type.
+
+Syntax:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+global class class_name
+ 
+{
+ 
+@future
+ 
+Static void methodname(parameters)
+ 
+ {
+ 
+//body of the method
+ 
+}
+ 
+
+82) What is Metadata-driven development model ?
+An app development model that allows apps to be defined as declarative “blueprints,” With no code required. Data model, objects, forms, workflows, and more are defined by metedata.
+
+83) What is S-Control ?
+S-Controls are the predominant salesforce.com widgets which are completely based on JavaScript. These are hosted by salesforce but executed at client side. S-Controls are superseded by VisualForce now.
+
+84) Will Visualforce still supports the merge fields usage like S-control?
+Yes. Just like S-Controls. Visualforce pages support embedded merge fields.
+
+85) What is SOAP ?
+A protocol that defines a uniform way of passing XML-encoded data. SOAP Stands for Simple Object Access Protocol.
+
+86) What is a Time Trigger?
+A setting that defines when time-dependent workflow actions should fire.
+
+87) Does user can create insert their own custom logo, while creating their own custom applications ?
+Yes user can upload their custom logo in documents and then they choose that logo for organization.
+
+88) List things that can be customized on page ?
+We can customize different things on page layout like, Fields, Buttons, Custom Links and Related Lists. We can also create sections.
+
+89) What is a “Self Relationship”?
+Self Relationship is a lookup relationship to the same object. Suppose let’s take an object “Merchandise”. Here we can create relationship in between the Account to Account (same object) object. That is called “Self Relationship”.
+
+90) What are the main things need to consider in the “Master-Detail Relationship”?
+Record level access is determined by the parent, Mandatory on child for reference of parent, cascade delete (if you delete the parent, it can cascade delete the child).
+
+91) What is the difference between trigger and workflow?
+Workflow
+
+Workflow is automated process that fired an action based on Evaluation criteria and rule criteria.
+
+We can access a workflow across the object.
+
+We cannot perform DML operation on workflow
+
+We cannot query from database
+
+Trigger
+
+Trigger is a piece of code that executes before or after a record is inserted or updated.
+
+We can access the trigger across the object and related to that objects
+
+We can use 20 DML operations in one trigger.
+
+We can use 20 SOQL’s from data base in one trigger.
+
+92) What is Wrapper class?
+A Wrapper class is a class whose instances are collection of other objects.
+
+It is used to display different objects on a VF (Visual Force) page in same table.
+
+93) Difference between SOQL Vs SOSL in salesforce?
+SOQL- Salesforce Object Query Language
+
+Using SOQL we can Search only on one object one time.
+
+We can query on all fields of any datatype
+
+We can use SOQL in the Triggers and the classes.
+
+We can perform DML operation on sql query results.
+
+SOSL (Salesforce object Search Language)
+
+Using SOSL we can search on many objects at one time.
+
+We can query only on fields whose data type is text,phone and Email.
+
+We cannot use in Triggers but can in calsses.
+
+We cannot perform DML operation on search results.
+
+
+Checkout SalesForce Sample Resumes
+
+ 
+
+94) What is difference insert() and database .insert() ?
+Using insert method we can insert the records but if any error occurs in any record system will throw an error insertion fail and none of the records are inserted.
+
+Salesforce Certification Training!
+Explore Curriculum
+If we want to execute partially success of bulk insert operation we will use database .insert.
+
+95) What is Static Resources?
+Using Static Resources we can upload images, zip files, jar files, javascript and CSS files that can be referred in a visual force page.
+
+The maximum size of Static Resources for an organization is 250mB.
+
+96) How to call javascript using Static Resource in Visual Force page?
+Add java script file in Static Resource setup -> develop -> Static Resources -> click on ‘New’ -> Name: filename and add file from local desktop and save.
+
+We can use that file as follows in Visual Force page
+
+97) What is sharing rule?
+If we want to give access to other users we use sharing rules.
+
+98) How many ways we can share a record?
+Role Hierarchy :
+
+If we add a user to a role, the user is above in the role hierarchy will have read access.
+
+1
+Setup --> manage users --> roles --> setup roles --> click on ‘add role’ --> provide name and save.
+OWD:
+
+Defines the base line setting for the organization.
+
+Defines the level of access to the user can see the other user’s record
+
+OWD can be Private, Public Read Only, Public Read and Write.
+
+1
+Setup -> Security Controls -> sharing settings -> Click on ‘Edit’
+Manual Sharing :
+
+Manual Sharing is sharing a single record to single user or group of users.
+
+We can see this button detail page of the record and this is visible only when OWD setting is private.
+
+Criteria Based Sharing rules :
+
+If we want to share records based on condition like share records to a group of users
+
+Whose criteria are country is India.
+
+1
+Setup -> Security Controls -> sharing settings -> Click on ‘Edit’
+Apex sharing :
+
+Share object is available for every object(For Account object share object is AccountShare ). If we want to share the records using apex we have to create a record to the share object.
+
+99) Unit testing code which has logic around the CreatedDate ?
+You can create sObjects in memory with arbitrary CreatedDate values by using JSON.deserialize. This doesn’t enforce the normal read-only field attributes that prevent you from setting a createdDate value. However, you can’t commit arbitrary CreatedDate values to the database (or else it would be a serious security issue).
+
+An example of doing so :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+String caseJSON = ‘{“attributes”:{“type”:”Case”,”url”:”/services/data/v25.0/sobjects/Case/500E0000002nH2fIAE”},
+ 
+“Id”:”500E0000002nH2fIAE”,
+ 
+“CreatedDate”:”2012-10-04T17:54:26.000+0000″}’;
+ 
+Case c = (Case) JSON.deserialize(caseJSON, Case.class );
+ 
+System.debug(c.createdDate);
+Note that I built the caseJSON string by creating a test case and serializing it, which is the easiest way to get JSON similar to what you want, then you can just tweak the values.
+
+100) Ignoring Validation rules when deploying code ?
+I have seen a solution that uses a Custom Setting of ValidationRuleEnabled.
+
+ALL validation rules set up have the &&
+
+$Setup.CustomSetting__c.ValidationRuleEnabled__c added.
+
+When you want to deploy any code then the administrator changes the Custom Setting to FALSE, deploy the new code; don’t forget to re-enable the Custom Setting!
+
+Again this is not ideal as the ‘legacy’ code should be updated to accommodate the new validation rules; ideally at the time of creating the new validation rules (but who checks code coverage after making a small change like a validation rule)
+
+101) Can I find out if the current user has access to a record without querying ?
+To find out if a particular user has Edit access to a record, use the UserRecordAccess object. This object is available in API version 24.0 and later. You can use SOQL to query this object to find out if the user has edit access to the record in question.
+
+1
+SELECT RecordId, HasEditAccess FROM UserRecordAccess WHERE UserId = [single ID] AND RecordId = [single ID]
+If you want to check a batch of records you can use
+
+1
+2
+3
+4
+5
+SELECT RecordId FROM UserRecordAccess WHERE UserId=:UserInfo.getUserId()
+ 
+AND HasReadAccess = true ANDRecordId IN :allRecordIds LIMIT 200
+ 
+But make sure that allRecordIds is a LIST of IDs. It doesn’t work if allRecordIds is a SET of IDs. I guess that’s a bug.
+Also, only a maximum amount of 200 recordIds can be checked in one query.
+
+
+Checkout SalesForce Tutorial
+
+102) Detecting governor limits through apex ?
+First of all, the exception thrown by hitting a limit, System.LimitException is uncatchable and means that your script will be killed, even if it happens inside a try/catch block. There is a class, Limits, that contains a number of static methods that allow you to check your governor limit consumption,
+
+see: 
+
+1
+https://www.salesforce.com/us/developer/docs/apexcode/Content/apex_methods_system_limits.htm
+With that said, your example of @future calls per day is one of the limits that simultaneously is and isn’t a governor limit as I believe it throws a System.AsyncException instead which  is not catchable, and kills your script as a LimitException would.
+
+103) What is a concise function that formats a (String) decimal into a currency format in Apex ?
+@RickMeasham’s method is a good one, but I ran into a couple rounding issues with negative values and fractional values. Here’s my edited version of the method that passes the tests I needed it to (not rendering -0.001 as “-0.00”, not rendering -1.10 as “-1.09”).
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+public static String formatCurrency(Decimal i)
+ 
+{
+ 
+if (i == null || Math.abs(i) < 0.005) return ‘$0.00’;
+ 
+String s = (i.setScale(2) + (i >= 0 ? 0.001 : -0.001)).format();
+ 
+return s.substring(0, s.length() – 1);
+ 
+}
+ 
+(EDIT: changed “<= 0.005” to “< 0.005” per @RickMeasham’s advice below.)
+(EDIT 2: actually realized, when I finished tests, that this updated method still had a few shortcomings related to rounding. I updated to delegate to Math.roundToLong per code below [which uses round half even, not half up as I stated in my comments erroneously]. It now passes all my unit tests, which you can see here: https://codepad.org/ycttSXjq)
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+private String formatCurrency(Decimal i)
+ 
+?{
+ 
+if (i == null) return ‘0.00’;
+ 
+i = Decimal.valueOf(Math.roundToLong(i * 100)) / 100;
+ 
+String s = (i.setScale(2) + (i >= 0 ? 0.001 : -0.001)).format();
+ 
+return s.substring(0, s.length() – 1);
+ 
+}
+104) How do you write a unit test for a trigger whose only function is to make a callout ?
+Both future methods and callouts can be unit tested.
+
+To test future methods simply make your call to any future method between Test.startTest();and Test.stopTest(); statements and the future method will return when Test.stopTest(); is called. See the documentation for the Test class here: System. Test
+
+Testing callouts is a bit trickier though. Basically, in your callout code, you check to see if you’re executing within a unit test context by checking Test.isRunningTest() and instead of getting your callout response from an HttpResponse.send() request, you return a pre-built test string instead. There’s one example of this method here: https://www.iterativelogic.com/unit-test-callouts-in-apex-code-part-2/
+
+There’s also an older example of callout unit testing that uses a static variable you set in your unit test. Just replace that static variable with a call to Test.isRunningTest() and their example works fairly well as well. That example can be found here:https://sfdc.arrowpointe.com/2009/05/01/testing-http-callouts/
+
+105) Can report data be accessed programmatically?
+Update for Winter ’14
+
+API :
+
+I think the biggest announcement that developers have been waiting for API wise is the availability of our Analytics API. We introduced a limited pilot in summer 13 and now the Analytics REST API is generally available. The Analytics API lets you integrate Salesforce report data into your apps programmatically and has several resources that let you query metadata, and record details.
+
+Source – Winter 14 Developer Preview
+
+106) How do you unit test a trigger when you don’t know the required fields ?
+Customers can have validation on custom fields via validation rules and triggers, so handling that in your unit tests without customer intervention is next to impossible. The first step to reducing issues is to have your test data populate all standard fields and ensure the data uses the most common formatting for your customer base (US style phone numbers and addresses for the US for example).
+
+Beyond that you can use the new Reflection features added to Salesforce in Summer ’12 to allow customers to create unit test data classes that can be used by your managed package. Basically you define a test data generation interface and the customer creates an Apex class to generate data for you. Here’s an example of using Reflection in a similar manner on the DeveloperForce blog:
+
+https://blogs.developerforce.com/developer-relations/2012/05/dynamic-apex-class-instantiation-in-summer-12.html
+
+Using the method for unit tests run on install might be problematic as you’d have to have the customer create the class before they install your package and your package could only look for the class by name (or iterate through all default namespace classes and check for the correct interface). However, it’s no longer necessary for unit tests to run during installation for managed packages and by default they do not.
+
+The Reflection method requires some coding knowledge on the customer side, but you could add a tool in your application to generate the custom unit test data class for the customer.
+
+FYI, it’s no longer necessary for managed package unit tests to succeed in customer orgs. They’re not required on install, they will no longer prevent deployment to production and they don’t count as part of the customers unit test coverage percentage for purposes of deployment. The only exception to that is if the customer uses ANT and sets the runAllTests parameter to true.
+
+107) Deleting a class without IDE ?
+This can be done with the Force.com Migration
+
+Tool:https://wiki.developerforce.com/page/Force.com_Migration_Tool
+
+See the full documentation here:
+
+https://wiki.developerforce.com/page/Force.com_Migration_Tool
+
+The tool can create or delete any meta-data that can be created through the Force.com IDE or Change Sets. It comes with a sample config file that contains example deployments for deploying objects and Apex code and deleting them as well. The documentation has a very detailed step-by-step guide here: https://www.salesforce.com/us/developer/docs/daas/index_Left.htm#StartTopic=Content/forcemigrationtool.htm
+
+108) Is there a defacto 3rd party utilities library for Apex such as Apache Commons is for Java?
+Apex-lang is about as close to a Java-style library as you can get. Contains several string, database, and collection utilities that mimmick Java functionality. Be aware though, some stuff including Comparing and Sorting collections is out of date with the advent of the Comparable interface in Apex.In addition to apex-lang, and like you suggest, I typically create or reuse static helper methods throughout my projects. Static helper methods are very convenient for reusing code in Chatter functionality, DML handling, Exception handling, Unit testing, etc.
+
+109) Using transient keyword to store password in hierarchy custom setting ?
+Because your myPref property is transient the initialisation you perform in the constructor won’t round trip when the page posts back.
+
+When I’ve used transient and a protected custom setting I use separate properties that are transient and then only work with the custom setting in the post back method.
+
+Controller
+
+Skip code block
+
+public with sharing class TestCustomSettings
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+{
+ 
+// transient to ensure they are not transmitted as part of the view state
+ 
+public transient String password1 {get; set;}
+ 
+public transient String password2 {get; set;}
+ 
+public PageReference save() {
+ 
+// I’ve changed this to getInstance() rather than getValues()
+ 
+TestR__c myPref = TestR__c.getInstance(UserInfo.getOrganizationId());
+ 
+if(myPref == null) {
+ 
+myPref = new TestR__c();
+ 
+myPref.SetupOwnerId = Userinfo.getOrganizationId();
+ 
+}
+ 
+myPref.Password1__c = password1;
+ 
+myPref.Password2__c = password2;
+ 
+// Note that by using upsert you don’t need to check if the Id has been set.
+ 
+upsert myPref;
+ 
+}
+ 
+}
+Visualforce page
+
+You can use inputSecret rather than inputField in the Visualforce page so that the browser will mask the input.
+
+110) Is there a way to setup continous for apex tests ?
+There are a couple of decent Dreamforce presentations here: Team Development: Possible, Probable, and Painless and Continuous Integration in the Cloud.
+
+We ran into some issues with this in practice and there was no way to get true automation (i.e., set it and forget it). We were also set it up with Selenium.
+
+Here were the issues that I remember.
+
+Some features aren’t supported in the metadata API and cannot be moved via the ant migration. If you have any unit tests that work with those features, you have to manually work on your CI org.
+
+Deletions are harder to maintain. You have to manually update and apply a destructiveChanges.xml file or replicate the deletion in the CI org.
+
+We ran into a situation where some metadata XML files had ‘invalid’ data in them. The suggested solution was to build a post checkout script that manipulates the offending XMLs into valid XMLs. Not ideal.
+
+On projects, we wanted to track just our changes and push out just our changes in source control. In theory, this would allow much easier rebaselining. This would have required more manual maintenance of XML files (e.g., 2 new fields added on Account and only want to push those 2 fields not all (*) fields).
+
+My conclusion is that it is worth doing if you can get it set up, but if you are working on shorter-term projects and don’t have a decent amount of time budgeted in for it, it probably isn’t worth setting up. Although it isn’t CI, check out https://developer.force.com/cookbook/recipe/automated-unit-test-execution. You could set it up to run every hour or something like that.
+
+111) What are the implications of implementing Database. Stateful ?
+Daniel Ballinger: No, batches do not ever run simultaneously. You are correct, however, that serialization is the culprit here.
+
+grigriforce: what’s your batch size? If you’re doing a million records, and your batch size is 1, then you will serialize/deserialize your state 1M times. Even with a small serialized object, that’s gonna hurt.
+
+112) What are the recommended ways to refactor in Apex ?
+I use the second method. After refactoring, I select the ‘src’ folder, use File Search/Replace and all the changes are made and saved to the server in one go.
+
+113) What is a good set of naming conventions to use when developing on the Force.com platform ?
+Follow the CamelCase Java conventions, except for VF pages and components start with a lower case letter.
+
+Triggers:
+
+Trigger – The trigger itself. One per object.
+
+TriggerHandler – Class that handles all functionality of the trigger
+
+TriggerTest
+
+Controllers:
+
+Controller
+
+ControllerExt
+
+ControllerTest
+
+ControllerExtTest
+
+Classes:
+
+Test (These might be Util classes or Service classes or something else).
+
+Visualforce pages and components:
+
+[optionalDescription] (without the suffix Controller). There might be multiple views so could also have an extra description suffix.
+
+Object Names and custom Fields
+
+Upper_Case_With_Underscores
+
+Variables/properties/methods in Apex
+
+camelCaseLikeJava – more easily differentiated from fields
+
+Test methods in test classes
+
+Upcoming Batches - Salesforce Training!
+23
+
+MAY Thursday
+6:30 AM IST
+25
+
+MAY Saturday
+7:00 AM IST
+26
+
+MAY Sunday
+6:30 AM IST
+28
+
+MAY Tuesday
+6:30 AM IST
+More Batches
+test-For example, testSaveOpportunityRequiredFieldsMissing, testSaveOpportunityRequiredFieldsPresent, etc.
+
+Working on something that would be used as an app or in some cases just a project? If yes, then do the following :
+
+Prefix all custom objects, apex classes, Visualforce pages and components with an abbreviation so that they are easier to identify (e.g., easier for changesets). For example the WidgetFactory app would have the prefix wf on those. Additionally, when adding custom fields to a standard object they would also be prefixed to identify them as part of the app/package.
+
+The main reason for the Object and Fields Names using Upper_Case_With_Underscores is that when you type in the name field or object with spaces it automatically adds the underscores. Although Apex is case insensitive, always refer to the Objects and Custom Fields in the code as Upper_Case_With_Underscores as well for consistency all around and consistency with what is generated by the SOQL schema browser and other tools. Object and Field Labels (which are generally ignored by code but visible to users) should keep spaces, not underscores.
+
+114) Why use Batch Apex ?
+A Batch class allows you to define a single job that can be broken up into manageable chunks that will be processed separately.
+
+One example is if you need to make a field update to every Account in your organization. If you have 10,001 Account records in your org, this is impossible without some way of breaking it up. So in the start() method, you define the query you’re going to use in this batch context: ‘select Id from Account’. Then the execute() method runs, but only receives a relatively short list of records (default 200). Within the execute(), everything runs in its own transactional context, which means almost all of the governor limits only apply to that block. Thus each time execute() is run, you are allowed 150 queries and 50,000 DML rows and so on. When that execute() is complete, a new one is instantiated with the next group of 200 Accounts, with a brand new set of governor limits. Finally the finish() method wraps up any loose ends as necessary, like sending a status email.
+So your batch that runs against 10,000 Accounts will actually be run in 50 separate execute() transactions, each of which only has to deal with 200 Accounts. Governor limits still apply, but only to each transaction, along with a separate set of limits for the batch as a whole.
+Disadvantages of batch processing :
+
+It runs asynchronously, which can make it hard to troubleshoot without some coded debugging, logging, and persistent stateful reporting. It also means that it’s queued to run, which may cause delays in starting.
+There’s a limit of 5 batches in play at any time, which makes it tricky to start batches from triggers unless you are checking limits.
+If you need access within execute() to some large part of the full dataset being iterated, this is not available. Each execution only has access to whatever is passed to it, although you can persist class variables by implementing Database.stateful.
+There is still a (fairly large) limit on total Heap size for the entire batch run, which means that some very complex logic may run over, and need to be broken into separate batches.
+115) Documenting Salesforce.com Apex class files ?
+I have used apexDoc for a while and we are starting to roll it out more fully for our use at my organization. It is open source software and so you could always contribute some updates for it :-) What features are you wanting to add to it that it doesn’t have (just to give a flavor)?
+
+In answer to your questions
+
+1. I don’t think anybody has successfully managed to do this. There is an idea of the ideas exchange for it to be done but it seems to gain very little support.
+
+2. Theoretically, it should be pretty easy as apex is a Java DSL. Have you tried running Doxygen and if so what errors does it throw up?
+
+3. I use ApexDoc to generate some basic output and then have a little script tied in to copy across custom css and things. It isn’t perfect but it does for the small amount we need at the moment.
+
+I believe the IDE is being open sourced at some time in which case I would imagine the antlr grammar file would become available which may help you out.
+
+I know it is not really an answer for what you wanted to hear per se, but sadly it’s all we have atm (and I would love a nicer documentation generator!!)
+
+Paul
+
+116) Workarounds for Missing Apex Time.format() Instance Method ?
+You could just split the DateTime format() result on the first space – does that give you what you’re looking for ?
+
+public String myDateFormat(DateTime dt)
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+{
+ 
+String[] parts = dt.format().split(‘ ‘);
+ 
+return (parts.size() == 3) ? (parts[1] + ‘ ‘ + parts[2]) : parts[1];
+ 
+}
+ 
+produces
+ 
+6:38 PM
+ 
+for me in English (United States), and
+ 
+18:42
+ 
+in French(France).
+UPDATE
+
+As tomlogic points out, the above method is not very robust – some locales may include spaces in the date or time portion of the format, and the ordering is not consistent. This second attempt assumes that the date and time are separated by zero or more spaces, but handles spaces within the two portions, and either ordering of date and time. The only assumption made is that the formatted Date is contained within the formatted Time:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+public String myDateFormat(DateTime dt)
+ 
+{
+ 
+return dt.format().replace(dt.date().format(), ”).trim();
+ 
+}
+ 
+Seems to work fine for Hebrew, Vietnamese & Korean, as well as English and French.
+117)  Is there an average method for apex math ?
+Unfortunately, the standard math methods only include simpler operations (i.e. those that work on a single, or two values), so it looks as though you’ll have to roll your own method.
+
+Of course, the number of script statements executed will be proportional to the length of the list, so of the lists are ever of a fixed size it could be worth using a macro to generate the addition part for you:
+
+1
+Int sum = i[0] + i[1] + … i[n];
+Doing so would only count for one statement, but you’ll only need this if governor limits are of concern which is often not a worry.
+
+If govenor limits aren’t an issue you could create a function along these lines:
+
+Skip code block
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+Integer[] myInts = new Integer[]{1, 2, 3, 4, 5, 6, 7};
+ 
+Integer total = 0;
+ 
+Double dAvg;
+ 
+for (Integer i : myInts) {
+ 
+total += i;
+ 
+}
+ 
+dAvg = Double.valueOf(total) / myInts.size();
+ 
+return dAvg;
+ 
+
+118) Grammar for creating an Apex parser ?
+Keep an eye on Apex tooling api, which is used in Developer console. This is supposed to be released to public access soon.
+
+119) Does ‘default value’ do anything if the object is created through Apex?
+New feature coming in the next release:
+
+1
+2
+3
+4
+5
+Foo__c f = Foo__c.sobjecttype.newSObject(
+ 
+recordTypeId, // can be null
+ 
+true); // loadDefaultValues
+120) Detect the current LoggingLevel in Apex ?
+Unfortunately, I don’t think there is a way to check the current logging level in APEX.
+
+121) Call Apex class method on the fly (dynamically) ?
+While you can instantiate a class based on its name using the Type system class, you can’t dynamically locate a method and execute it. The best that you can do is to dynamically create an instance of a class that implements an interface and executes one of the methods on the interface.
+
+There’s more information on the Type class and an example in the :
+
+Apex Developer’s Guide
+
+122) SOQL – query a query ?
+It sounds like you’re talking about using nested SOQL queries. Here’s an example of querying a parent and two child objects in one query, using the relationship name for each related list of objects:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+list accswithchildren = [select Id, Name, CreatedDate,
+ 
+(select Id, CreatedDate from Tasks order by CreatedDate desc limit 1),
+ 
+(select Id, Service_Date__c from Custom_Object__r order by Service_Date__c desc limit 1)
+ 
+from Account where Id in :setofids];
+ 
+You can then loop through those Accounts in Apex, and for each one, there is a list (size 0 or 1) of Tasks and Custom_Object__c:
+ 
+ 
+ 
+for (Account a : accswithchildren)
+ 
+{
+ 
+list theseTasks = a.Tasks;
+ 
+list otherobjects = a.Custom_Object__r;
+ 
+//do something with these records
+ 
+}
+123) What’s the best way to check if person accounts are enabled via Apex Code ?
+I’ve found two methods to accomplish this.
+
+Method 1
+
+Try to access the isPersonAccount property on an Account and catch any exception that occurs if that property is missing. If an exception is generated then person accounts are disabled. Otherwise they’re enabled. To avoid making person accounts required for the package you assign the Accountobject to an sObject and use sObject.get( ‘isPersonAccount’ ) rather than accessing that property directly on the Account object.
+
+This method takes ~3.5ms and negligible heap space in my testing.
+
+Skip code block
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+// Test to see if person accounts are enabled.
+ 
+public Boolean personAccountsEnabled()
+ 
+{
+ 
+try
+ 
+{
+ 
+// Try to use the isPersonAccount field.
+ 
+sObject testObject = new Account();
+ 
+testObject.get( ‘isPersonAccount’ );
+ 
+// If we got here without an exception, return true.
+ 
+return true;
+ 
+}
+ 
+catch( Exception ex )
+ 
+{
+ 
+// An exception was generated trying to access the isPersonAccount field
+ 
+// so person accounts aren’t enabled; return false.
+ 
+return false;
+ 
+}
+ 
+}
+Method 2
+
+Use the account meta-data to check to see if the isPersonAccount field exists. I think this is a more elegant method but it executes a describe call which counts towards your governor limits. It’s also slightly slower and uses a lot more heap space.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+This method takes ~7ms and ~100KB of heap space in my testing.
+ 
+// Check to see if person accounts are enabled.
+ 
+public Boolean personAccountsEnabled()
+ 
+{
+ 
+// Describe the Account object to get a map of all fields
+ 
+// then check to see if the map contains the field ‘isPersonAccount’
+ 
+return Schema.sObjectType.Account.fields.getMap().containsKey( ‘isPersonAccount’ );
+ 
+}
+124) Can’t Deploy Due to Errors in 3rd Party Packages ?
+It was previously possible to install managed packages and Ignore APEX Test Errors this isn’t the case anymore.
+
+You are probably going to have to uninstall them if you want to deploy from Sandbox to production and reinstall them.
+
+If it’s Milestones PM (the package) is you can probably get an unmanaged version to work with and fix the bugs.
+
+UPDATE
+
+Looks like you are using the unmanaged package. So I think if you don’t want to uninstall before going to production your going to have to fix those errors manually by fixing the code.
+
+Unfortunately, SFDC test methods don’t live in a complete vacuum where you can run tests against your org without bumping other code, even when you go to deploy.
+
+125) How Can I Tell the Day of the Week of a Date ?
+Formulas
+
+There isn’t a built-in function to do this for you, but you can figure it out by counting the days since a date you know. Here’s the concept: I know that June 29, 1985 was a Saturday. If I’m trying to figure out the day of the week of July 9 of that year, I subtract the dates to determine the number of days (10), and then use modular division to figure to remove all the multiples of 7. The remainder is the number of days after Saturday (1 = Sunday, 2 = Monday, etc.) and you can use that number in your logic:
+
+MOD(DATEVALUE( Date_Field__c ) – DATE(1985,7,1),7)
+
+Apex Code
+
+You could do the same thing with time deltas, but you can also use the poorly
+
+documentedDateTime.format() function:
+
+1
+2
+3
+4
+5
+6
+7
+Cast the Date variable into a DateTime
+ 
+DateTime myDateTime = (DateTime) myDate;
+ 
+String dayOfWeek = myDateTime.format(‘E’);
+ 
+// dayOfWeek is Sun, Mon, Tue, etc.
+126) What is App in Salesforce?
+An app is a group of tabs that work as a unit to provide functionality. Users can switch between apps using the Force.com app drop-down menu at the top-right corner of every page.
+
+You can customize existing apps to match the way you work or build new apps by grouping standard and custom tabs.
+
+Navigation to create an app in Salesforce: Setup ->Build ->Create->App-> Click on new and create your application according to your requirements.
+
+127) What is the object in Salesforce.com?
+Objects are database tables that allow you to store data specific to your organization in salesforce. You can use custom objects to extend salesforce.com functionality or to build new application functionality.
+
+When you create a custom object, we can create a custom tab, customized related lists, reports, and dashboards for users to interact with the object data. You can also access custom object data through the Force.com API.
+
+Navigation to create an object in sales force: Setup-->Build-->Create-->Object--> Click on new object and create object according to your requirement.
+
+128) How many relationships included in SFDC & What are they ?
+We are having two types of relationships, they are
+
+Lookup Relationship
+
+Master-Detail Relationship
+
+129) What is a “Lookup Relationship ?
+This type of relationship links two objects together,
+
+Up to 25 allowed for object
+
+Parent is not a required field.
+
+No impact on a security and access.
+
+No impact on deletion.
+
+Can be multiple layers deep.
+
+Lookup field is not required.
+
+[Related Page: How to Create Field Dependence in SalesForce]
+
+130) What is “Master-Detail Relationship”?
+Master-Detail relationship is the Parent-child relationship. In which Master represents Parent and detail represents Child. If Parent is deleted then Child also gets deleted. Roll-up summary fields can only be created on Master records which will calculate the SUM, AVG, MIN of the Child records.
+
+Up to 2 allowed to object.
+
+Parent field on child is required.
+
+Access to parent determines access to children.
+
+Deleting parent automatically deletes child.
+
+A child of one master detail relationship cannot be the parent of another.
+
+Lookup field on page layout is required.
+
+131) How can I create Many – to – Many relationships?
+Lookup and Master-detail relationships are one too many relationships. We can create many – to – Many relationships by using a junction object. Junction object is a custom object with two master-detail relationships.
+
+132) A custom object contains some records, now my requirement is to create a field in this object with master-detail relationship. Can we create master-detail relationship in this case?
+No, directly we cannot create master-details relationship if a custom object contains existing records.
+
+Following are the steps to create to create a master-detail relationship when records are available in a custom object.
+
+First create field with lookup relationship.
+
+And then associate look field with parent record for every recordNext change the data type of the field from look up to Master detail.
+
+133) List examples of custom field types ?
+Text, Pick list, Pick list (multi select), Date, Email, Date/Time, Date, Currency, Checkbox, Number, Percent, Phone, URL, Text Area, Geolocation, lookup relationship, master detail relationship etc…..
+
+134) What is TAB in Salesforce?
+Tab is a user interface component to user creates to display custom object data.
+
+There are three type of tabs.
+
+Custom Tabs
+
+Visual force Tabs
+
+Web Tabs
+
+135) What are the actions in workflow ?
+Email Alert
+
+Task
+
+Field Update
+
+Outbound Message
+
+Go through the below link for the more information about workflow actions  
+
+Salesforce Workflow Automation
+
+136)  How many ways we can made field is required ?
+While creation of field
+
+Validation rules
+
+Page Layout level
+
+137)  What is difference between Role and Profile?
+Role is Record-level access and it is not mandatory for all users.
+
+Profile is object level and field level access and it is mandatory for all users.
+
+138) What is the maximum size of the PDF generated on visualforce attribute renderAs?
+15MB
+
+139)  How many controllers can be used in a visual force page?
+Salesforce come under SAAS so, we can use one controller and as many extension controllers.
+
+140)  What is the difference between Action support and Action function?
+Action function:  
+
+Invoke the controller method from java script using AJAX and we can use action function from different places on visual force page.
+
+Action support: 
+
+Invoke the controller method using AJAX when even occurs on page like onMouseOver, onClick, ect… and we can use action support for particular single apex component.
+
+141) How many ways we can call the Apex class?
+Visual force page
+
+Web Service
+
+Triggers
+
+Email services
+
+142) How to create Master Details relationship between existing records?
+Directly we can’t create a Master-Detail relationship between existing records, first we have to create Lookup relationship and provide valid lookup fields and it should n’t null.
+
+[Related Page: What is Cloud Computing - Salesforce]
+
+143) What is permission set?
+Permission sets extend user’s functional access without changing user’s profile.
+
+Ex:
+
+A user has only read access through profile on custom object, administrator want to give access Edit and create operations to him without changing the profile. Administrator creates the permission set having edit and creates operation on custom object and assign to that user.
+
+144) What is manual sharing ?
+Manual sharing is to share a record to a particular user manually.
+
+Go to detail page of record and click on manual sharing button and assign that record to other user with Read or Read/Write access.
+
+Manual Sharing button enables only when OWD is private to that object.
+
+145) How we can change the Grant access using role hierarchy for standard objects?
+Not possible.
+
+146) Explain the uses of “Transfer Record” in profile?
+If user have only Read access on particular record but he wants to change the owner name of that record, then in profile level Transfer Record enables he can able to change the owner.
+
+147) What is Field dependency?
+According to the field selection on one field filter the pick list values on other field.
+
+148) Is check box performs like controlling field?
+Yes possible. Controlling field should be Check box or pick list.
+
+149) How many field dependencies we can use in Visual Force page?
+Maximum we can use 10 field dependencies in VF page.
+
+150) What is Roll-up summary?
+Roll-up displays the count of child records and calculate the sum, min and max of fields of the child records.
+
+151) How to create Roll-up summary field on lookup relation?
+Not possible. Roll-up summary is enabled for only Master –Detail relationship.
+
+152) What are Record Types?
+Record Types are restrict the pick list values and assign to the different page layouts for different Record Types.
+
+153) What is Audit Trail?
+Audit Trail provides the information or track all the recent setup changes that an administrator done to the organization.
+
+This can store the last 6 months data.
+
+154) What are Report Types?
+4 Types of reports in Salesforce
+
+Tabular Reports
+
+Summary Reports
+
+Matrix Reports
+
+Joined Reports
+
+155) What is Dashboard ?
+Dashboard is a pictorial representation of report. We can add up to 20 reports in single dashboard.
