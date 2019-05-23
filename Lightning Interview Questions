@@ -1,0 +1,401 @@
+1. What are the type of events into Salesforce Lightning component?
+
+a. Application Event – Scope of this event is throughout the lightning App and any component which has registered for this event would get a notification.
+b. Component Event– Scope of this event is within itself or the parent component of this event, all the components declared within the parent component would get notified of this event.
+c. System Event- these are the events fired by Salesforce’s system during the lifecycle of the lightning app.
+
+
+ 
+2. What are the basic differences between Application Event and Component Event?
+
+Component events are used to do communication between child and parent. They use bubbling and capture same as used in DOM events. A change in a child component can be communicated to the parent component via component event.
+
+Application events are used to communicate any change in the component to a broader audience. Any component who has registered for this event will get a notified.
+To use Component Event API we use the below syntax
+
+3. When should we use Component event and application events?
+
+It is best to always use a component event instead of an application event. Component events can only be handled by components above them in the containment hierarchy, therefore, their usage is localized to the components that need to know about them.
+
+Application events are best used for something that should be handled at the application level, such as navigating to a specific record. Application events allow communication between components that are in separate parts of the application and have no direct containment relationship.
+
+4. Which interface we are supposed to implement so that a lightning component can be used as quick action?
+
+We need to implement the following “force: lightningQuickAction” so that we can use the component as a Quick Action
+
+5. Which interface we are supposed to implement so that a lightning component can be used as a Tab?
+
+
+ 
+We need to implement the following “force:appHostable” so that we can use the component as a Tab
+
+6. How can we use a lightning component in a VisaulForce Page? Explain?
+
+A Lightning component can be embed in any webpage using a very powerful and flexible feature, Lighting out. When used with Visualforce some complexity becomes simpler.
+Lightning component can be added to Visualforce page in three steps:
+
+1. We have to first Add the Lightning Components for Visualforce JavaScript library to your targetted Visualforce page using the tag.
+
+2. Next we have to create and refer a Lightning app which is used to the component dependencies.
+
+3. Lastly we need to write a JavaScript function which will finally create the the component on the page using $Lightning.createComponent()
+
+7. How can we call child component controller method from the parent component controller method?
+
+To call a child component’s controller method, we need to first create a aura:method which is publically accessible, aura:method is used to communicate down the containment hierarchy i.e. parent to child. Sample code for implementing the aura method:
+Component code
+
+Controller
+({
+publicmethod: function(cmp, event) {
+var params = event.getParam(‘arguments’);
+if (params) {
+var message = params. str;
+console.log(“message: ” + message);
+return message;
+}
+}
+})
+
+
+ 
+Calling the cild method from parent controller
+({
+callchildCompMethod : function(component, event, helper) {
+var childCmp = component.find(“childCompName”);
+var Result =
+childCmp. publicmethod (“message sent by parent component”);
+console.log(“Result: ” + Result);
+}
+})
+
+8. What are the different Lightning component bundles?
+a. Component
+b. Controller
+c. Helper
+d. Style
+e. Document
+f. Design
+g. SVG
+h. Rendrer
+
+9. How to ensure FLS while working with Lightning Component?
+
+FLS and CRUD are not automatically enforced in the lightning component whenever any object is referenced in the Apex Controller and the component will display the fields and records for which the users do not have access. Therefore we should manually enforce the FLS and CRUD in the Apex Controller, or we should try to use Lightning Data service wherever possible because it takes care of FLS and CRUD for us.
+
+10. How can we use Lightning Components with the Salesforce1 Mobile App ?
+
+For this purpose we need to first make a lightning tab which points to the lightning component we created and then we have to include that tab in the salesforc1 Mobile Navigation select list and the newly created tab to it.
+
+11. Can we make a Lightning Component that shows up in both the mobile and the desktop user interfaces?
+
+Lightning component is lightning experience ready by default and is also compatible in Salesforce1 App, it has a responsive layout therefore it adjust its resolution according the screen size and therefore can be used on desktop as well without writing any separate code.
+
+
+ 
+12. Is Lightning component framework an MVC framework ?
+
+No it is not a MVC framework it is a component based framework and event driven.
+
+13. Which parts of Lightning Components are server-side and which are client-side ?
+
+Lightning components have two types of controller, one which uses javascript and responds to the event occurring in the components at client side and the second controller which is an apex class. Method of apex controller are accessed by the JavaScript controller methods asynchronously.
+
+14. Can we make one component inherit styles/CSS from a parent component, or must we always define it in the component ?
+
+Child component inherits the CSS from its aren’t we do not need to specify it for each component
+
+15. What is the use of the aura:method tag in Lightning ?
+
+aura:method is used to communicate down the containment hierarchy i.e. parent to child
+
+16. Can we Include One Lightning component to another ?
+
+Yes we can include one Lightning component in another Lightning component
+
+17. Is there any limit on how many component to have in one Application?
+
+There is no limit on number of components defined within an application by salesforce
+
+18. Is Lightning Components replacing Visualforce?
+
+No Lightning component is not replacing Visualforce, Visualforce is still supported by Salesforce.
+
+19. What is Aura? Why do we use the aura: namespace in the code?
+
+Aura is a UI framework for developing dynamic web apps for mobile and desktop devices. Aura provides a scalable long-lived lifecycle to support building apps engineered for growth.
+
+Aura supports partitioned multi-tier component development that bridges the client and server. It uses JavaScript on the client side and Java on the server side.
+
+20. Do we need a namespace to develop Lightning Components?
+
+You can have namespace in your org but it is not necessary to have a namespace to develop lightning component.
+
+21. What are the tools included in lightning?
+
+Lightning App Builder – It is a tool with User interface to use drag and drop functionality and create app fast by reusing the components, components can be standard or custom depending upon your requirement.
+Lightning Component Framework- it provides a bundle that can be used to build reusable custom components, Standalone App and to customize Salesforce1 App
+Lightning Connect – it is a powerful tool to facilitate the integration of force.com app with an external data source using OData specification
+Lightning Process Builder – it is a visualization tool to build automation required for your business processes.
+Lightning Schema Builder – it is a visualizing tool to view, create objects fields and relationship among them.
+
+22. What is difference between Visualforce Components and Lightning Components?
+
+
+ 
+Visualforce page is created keeping page as the center of the application and most of its calculation is performed at the server side. Lightning component on the other hand are created using the component based framework, most of the calculations are performed at the client side and makes the more dynamic and provide rich customer experience, also lightning component are build using mobile first approach.
+
+23. Does Lightning work with Visualforce ?
+
+Yes Lightning component works with Visualforce by implementing Lightning out as discussed earlier.
+
+24. Are there any CSS (styles) provided by salesforce.com as part of the supported Lightning Components ?
+
+Salesforce has provided lightning design system as the default css to be used with Lightning component.
+
+25. Are Lightning Components intended only for mobile apps?
+
+Although lightning framework creates component keeping mobile first approach, but its responsive design helps in providing the same experience over the desktop without writing separate lines of code
+
+26. What are the advantages of lightning?
+
+There are many advantages of using lightning like its out of the box component set which enables the fast paced creation of new apps, its event driven architecture which enables the easy decoupling between the components. Device awareness, cross browser compatibility and framework optimized for the performance.
+
+27. Can we integrate Lightning components with another framework, such as Angular?
+
+Yes we can integrate lightning with any 3rd party framework.
+
+28. Can we include external JavaScript/CSS libraries in components?
+
+It is possible to use custom CSS and JAvascriipt in the Lightning component
+
+29. What happens with existing Visualforce Pages in Lightning Experience?
+
+Most of the Visualforce page can be easily converted to lightning experience, but they are still supported by the salesforce and are not required to be converted
+
+30. Where we can display lightning component?
+
+Lightning component can be displayed at following places:
+1. Lightning Experience
+2. Salesforce1 App
+3. Template-based Community
+4. Standalone Lightning App
+5. Visualforce Pages (Using Lightning out )
+
+31. Do I always create an app bundle first when develop lightning component ?
+
+No it is not necessary to create an Appp Bundle first to develop the lightning component
+
+32. How can we deploy components to production org?
+
+Lightning component can be deployed to the production via change sets, force.com IDE, Managed Package.
+
+33. What is Lightning Experience?
+
+It is the new user Interface developed by salesforce team, which is built on component based framework and event driven architecture, which provides a dynamic and responsive Experience to the user. This framework is built to provide optimum performance by using stateful Client side and stateless Server architecture
+
+34. What is the use of implements in lightning component?
+
+Implements is use to refer platform interfaces which enables a component to be used in different contexts or to grant access to extra context data, a component can implement more than one interfaces.
+
+35. What is aura:registerevent in lightning component?
+
+aura:registerevent is the notifier component and it declares that it may fire a particular event, it includes ‘name’ attribute which is relevant only to component event and is not used for application event. Other attribute is the ‘type’ which lets the component know which event would be fired.
+
+Ex. <aura:registerEvent name=”Event” type=”c:EventName”/>
+
+36. How can we subscribe to an event in lightning component?
+
+To subscribe to an event in lightning component we need to include tag in the containment hierarchy. Subscription of these event depends on the event type i.e. component event or application event. For Component event we write below code.
+
+ 
+
+In this ‘name’ attribute in should be exactly as name attribute in tag in the component which has fired the component. The ‘action’ attribute of sets the client-side controller action to handle the event. The ‘event’ attribute specifies the event being handled.
+For Handling Application event we write below code
+
+‘Event’ and ‘action’ attribute are same as the component event handling, it is just that we do not include ‘name’ attribute to handle the application event.
+
+37. How can we communicate between two component?
+
+In Lightning Component Framework, the communication between two component is accompalished supported in several ways.
+1. Attributes or Methods to pass data down the component hierarchy
+2. Lightning Events to pass data up and around in the component hierarchy
+
+38. What is aura definition bundle?
+
+It represents a Lightning definition bundle, it contains a Lightning definition and all its related resources. It could define a component, application, event, interface, or a tokens collection.
+
+An AuraDefinitionBundle component is a collection of component definition files, each representing a different resource such as markup code, event documentations, applications and interfaces.
+
+Lightning bundles must be under a top-level folder that’s named aura. Each bundle must have its own subfolder under the aura folder.
+
+A bundle doesn’t have a suffix but definition files can have one of these suffixes
+Suffix Component Type
+
+Suffix
+
+Component Type
+.app	Application
+.cmp	Component
+.design	Design
+.evt	Event
+.intf	Interface
+.js	Controller, Helper, or Renderer
+.svg	SVG image
+.css	Style
+.auradoc	Documentation
+.tokens	Tokens collection
+39. What is aura:attribute?
+
+They are same as member variable in apex classes, they are typed fields and are instance of a component. Attribute helps in making component more dynamic.
+
+All attributes have a name and a type can be marked required by specifying ‘required=true’and can also have a default value. It has a naming rule as well:
+
+1. Must begin with a letter or an underscore
+2. Must contain only alphanumeric or underscore characters
+
+40. What is lightning: or ui: in any lightning component?
+
+Lightning has provided us with common User Interface components in the ui namespace which are used in the lightning component framework. They are ui:input and ui:output provide easy to implement common user interface.
+Component with lightning namespace also provides us with the user interface but on top of that they include lightning design system CSS by default so we do not have to worry about the styling of these components.
+41. How can we extend any component?
+
+To make a component extendable we need to set value of ‘extensible’ attribute as ‘true’ of the aura:component tag.
+When a component extends another component it inherits all of the helper methods and attributes
+
+42. How to register, fire and handle a component and application event?
+
+We register an event by by using the following code
+
+<aura:registerEvent name=”sampleComponentEvent” type=”c:compEvent”/>
+
+We fire event as shown below:
+
+var compEvent = cmp.getEvent(“sampleComponentEvent”);
+
+compEvent.fire();
+
+Handle component event as below :
+
+<aura:handler name=”sampleComponentEvent” event=”ns:eventName”
+
+    action=”{!c.handleComponentEvent}” phase=”capture” />
+
+Handle Application event as below:
+
+<aura:handler event=”c:appEvent” action=”{!c.handleApplicationEvent}”/>
+
+43. Let’s say that you have an app myApp.app that contains a component myCmp.cmp with a ui:button component. During initialization, the init() event is fired in what order?
+
+ui:button, ui:myCmp, and myApp.app.
+
+44. Why do we use @AuraEnabled annotation?
+
+The AuraEnabled annotation provides support for Apex methods and properties to be used with the Lightning Component framework.
+The AuraEnabled annotation is overloaded, and is used for two separate and distinct purposes.
+1. Use @AuraEnabled on Apex class static methods to make them accessible as remote controller actions in your Lightning components.
+2. Use @AuraEnabled on Apex instance methods and properties to make them serializable when an instance of the class is returned as data from a server-side action.
+
+45. Why do we use $A.enqueueAction(action)?
+
+It adds the server-side controller action to the queue of actions to be executed. Rather than sending a separate request for each individual action, the framework processes the event chain and batches the actions in the queue into one request. The actions are asynchronous and have callbacks.
+
+46. Use of THIS CSS class?
+
+This adds namespacing to CSS and helps prevent one component’s CSS from blowing away another component’s styling.
+
+47. What are the different ways to conditionally display markup, and what is the preferred approach?
+
+Using the <aura:if> tag
+Use CSS to toggle visibility of markup by calling $A.util.toggleClass(cmp, ‘class’) in JavaScript code.
+
+47. What is $Resource global value provider? Is it possible to obtain a reference to a static resource in Javascript code?
+
+It lets you reference images, style sheets, and JavaScript code you’ve uploaded in static resources.
+
+To obtain a reference to a static resource in JavaScript code, use $A.get(‘$Resource.resourceName’).
+
+48. Let’s say you have several buttons that reuse the same onclick handler. How will you retrieve the name of the button that fired the event?
+
+Use event.getSource() in the client-side controller to get the button component that was clicked. Call
+
+getLocalId() to get the aura:id of the clicked button.
+
+49. What are the names of interfaces that are added to a Lightning component to allow it to be used as custom tabs, and to be used in Lightning and Community builder?
+
+‘force:appHostable’ Allows a component to be used as a custom tab in Lightning Experience or the Salesforce app
+‘forceCommunity:availableForAllPageTypes’ To appear in Community Builder, a component must implement the forceCommunity:availableForAllPageTypes interface
+
+50. What is the use of force:hasRecordId interface?
+
+Add the force:hasRecordId interface to a Lightning component to enable the component to be assigned the ID of the current record.
+The recordId attribute is set only when you place or invoke the component in a context of a record. For example, when you place the component on a record page, or invoke it as an action from a record page or object home. In all other cases, such as when you create this component programmatically inside another component, recordId isn’t set, and your component shouldn’t depend on it.
+
+51. What is Lightning Design System (SLDS)?
+
+The Salesforce Lightning Design System (SLDS) component library is actively developed to enable Salesforce developers to create a uniform look and feel across all Salesforce-related applications while adhering to CSS best practices and conventions.
+
+52. What is the use of access=“global”?
+
+The framework enables you to control access to your applications, attributes, components, events, interfaces, and methods via the access system attribute. The access system attribute indicates whether the resource can be used outside of its own namespace.
+You can specify these values for the access system attribute.
+
+Private: Available within the component, app, interface, event, or method and can’t be referenced outside the resource. This value can only be used for or .Marking an attribute as private makes it easier to refactor the attribute in the future as the attribute can only be used within the resource.
+Accessing a private attribute returns undefined unless you reference it from the component in which it’s declared. You can’t access a private attribute from a sub-component that extends the component containing the private attribute.
+
+Public: Available within your org only. This is the default access value.
+
+Global: Available in all orgs.
+
+53. What is Lightning Data Services?
+
+They are similar to a standard controller in Apex coding, advantages of using lightning Data service are mentioned below
+1. Use Lightning Data Service to load, create, edit, or delete a record in your component without requiring Apex code.
+2. Lightning Data Service handles sharing rules and field-level security for you.
+3. In addition to not needing Apex, Lightning Data Service improves performance and user interface consistency.
+
+54. What are Local and Global ids with respect to lightning component?
+
+Component IDs
+A component has two types of IDs: a local ID and a global ID. You can retrieve a component using its local ID in your JavaScript code. A global ID can be useful to differentiate between multiple instances of a component or for debugging purposes.
+
+Local IDs
+A local ID is an ID that is only scoped to the component. A local ID is often unique but it’s not required to be unique.
+Create a local ID by using the aura:id attribute. For example:
+Find the button component by calling cmp.find(“button1”) in your client-side controller, where cmp is a reference to the component containing the button.
+
+Global IDs
+Every component has a unique globalId, which is the generated runtime-unique ID of the component instance. A global ID (1) is not guaranteed to be the same beyond the lifetime of a component, so it should never be relied on. A global ID can be useful to differentiate between multiple instances of a component or for debugging purposes.
+
+55. What is a FlexiPage in lightning?
+
+FlexiPage
+Represents the metadata associated with a Lightning page. A Lightning page represents a customizable screen made up of regions containing Lightning components.
+A Lightning page region can contain upto 25 components.
+
+Lightning pages are referred as FlexiPages in API and referred as Lightning pages elsewhere in SFDC documentation
+
+56. How to make quick lightning action?
+
+Add the force:lightningQuickAction or force:lightningQuickActionWithoutHeader interface to a Lightning component to enable it to be used as a custom action in Lightning Experience or the Salesforce mobile app. You can use components that implement one of these interfaces as object-specific or global actions in both Lightning Experience and the Salesforce app.
+
+57. What are value providers in Salesforce Lightning ?
+Value providers helps use to access data in Lightning Application .They are two value providers as v(View) and c(controller)
+v is component attribute set which helps to access component attribute values in markup
+c is component controller helps us to link with event handlers and action for the component
+
+58. List of Global value providers?
+
+$globalID
+$Browser
+$Label
+$Locale
+$Resource
+
+59. What are list of tools are avaliable in salesforce lightning ?
+
+Lightning Connect
+Lightning Component Framework
+Lightning Schema Builder
+Lightning Process Builder
+Lightning App Builder
